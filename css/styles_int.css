@@ -1,0 +1,139 @@
+/* Global styles */
+body {
+  background-color: #f5f8ff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1a1a1a;
+  margin: 0;
+  padding: 0 20px;
+}
+
+/* Navigation bar */
+#top-nav {
+  background-color: #003366;
+  padding: 10px 20px;
+  text-align: right;
+}
+
+#top-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#top-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Header Section */
+.header-div {
+  background-color: #cce0ff;
+  padding: 30px;
+  border-radius: 10px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Content Section */
+.content-div {
+  background-color: #e6f0ff;
+  padding: 25px;
+  border-radius: 10px;
+  margin: 25px 0;
+}
+
+/* Sport item layout */
+ol li.sport-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  padding-right: 20px;
+}
+
+.sport-text {
+  flex: 1 1 60%;
+  padding-right: 20px;
+}
+
+.sport-image {
+  flex: 0 0 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sport-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Media Section */
+.media-div {
+  background-color: #dceeff;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.media-div img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* Tableau Visualization Section */
+.tableau-div {
+  background-color: #cce5ff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Footer */
+.footer-div {
+  background-color: #003366;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px;
+  border-radius: 0 0 10px 10px;
+}
+
+.footer-div a {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.footer-div a:hover {
+  text-decoration: underline;
+}
+
+.tableau-div {
+  background-color: #e3f2fd;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.lift-app-link {
+  display: inline-block;
+  margin: 30px auto;
+  padding: 15px 30px;
+  background: linear-gradient(to right, #ffcc00, #ffaa00);
+  color: #1f1f1f;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.lift-app-link:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gym Lift Estimator</title>
+  <style>
+    body {
+      background-color: #1f1f1f;
+      color: #f0f0f0;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+    h1 {
+      color: #ffcc00;
+    }
+    input, button {
+      padding: 10px;
+      margin: 10px;
+      font-size: 1em;
+      border: none;
+      border-radius: 5px;
+    }
+    input {
+      width: 100px;
+    }
+    button {
+      background-color: #ffcc00;
+      color: #1f1f1f;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #ffaa00;
+    }
+    .results {
+      margin-top: 20px;
+      font-size: 1.2em;
+      background-color: #333;
+      padding: 20px;
+      border-radius: 10px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <h1>💪 Gym Lift Estimator</h1>
+  <p>Enter your weight and height, and we’ll guess your big three lifts!</p>
+  <div>
+    <label>Weight (lbs): </label>
+    <input type="number" id="weight" min="50" max="400"><br>
+    <label>Height (inches): </label>
+    <input type="number" id="height" min="48" max="84"><br>
+    <button onclick="estimateLifts()">Estimate My Lifts</button>
+  </div>
+
+  <div class="results" id="results" style="display: none;">
+    <p><strong>Bench Press:</strong> <span id="bench"></span> lbs</p>
+    <p><strong>Squat:</strong> <span id="squat"></span> lbs</p>
+    <p><strong>Deadlift:</strong> <span id="deadlift"></span> lbs</p>
+  </div>
+
+  <script>
+    function estimateLifts() {
+      const weight = parseFloat(document.getElementById("weight").value);
+      const height = parseFloat(document.getElementById("height").value);
+
+      if (!weight || !height || weight < 50 || height < 48) {
+        alert("Please enter valid weight and height values.");
+        return;
+      }
+
+      // Semi-fun formulas for guesstimation:
+      const weightFactor = weight * 0.8;
+      const heightFactor = (height - 60) * 2;
+
+      const bench = Math.round(weightFactor * 0.75 + heightFactor);
+      const squat = Math.round(weightFactor * 1.25 + heightFactor);
+      const deadlift = Math.round(weightFactor * 1.5 + heightFactor);
+
+      document.getElementById("bench").textContent = bench;
+      document.getElementById("squat").textContent = squat;
+      document.getElementById("deadlift").textContent = deadlift;
+
+      document.getElementById("results").style.display = "block";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Interests</title>
+  <link rel="stylesheet" href="css/styles_int.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav id="top-nav">
+    <a href="index.html">Resume</a> |
+    <a href="#video-section">Videos</a>
+  </nav>
+
+  <!-- Header Section -->
+  <div class="header-div">
+    <h1 id="intro-anchor">My Favorite Sports</h1>
+    <p>My top 3 favorite sports are pickleball, spikeball, and volleyball.</p>
+  </div>
+
+  <!-- Content Section 1: Lists -->
+  <div class="content-div">
+    <h2>Why These?</h2>
+    <ol>
+      <li class="sport-item">
+        <div class="sport-text">
+          <strong>Pickleball</strong>
+          <ul>
+            <li>I grew up playing tennis and have been playing pickleball for a long time. All my family plays so it's a great bonding time.</li>
+            <li>It's easily accessible as there are many courts to play on nearby.</li>
+            <li>I feel like it's one of the sports that I am best at.</li>
+          </ul>
+        </div>
+        <div class="sport-image">
+          <img src="assets/img/pickleball.png" alt="Pickleball" />
+        </div>
+      </li>
+
+      <li class="sport-item">
+        <div class="sport-text">
+          <strong>Spikeball</strong>
+          <ul>
+            <li>I love the uniqueness of a 360 degree playing field.</li>
+            <li>You can play this game anywhere as long as there's an open field, and someone has a net.</li>
+            <li>Spikeball is nostalgic as I played it the most with my family during COVID.</li>
+          </ul>
+        </div>
+        <div class="sport-image">
+          <img src="assets/img/spikeball.jpg" alt="Spikeball" />
+        </div>
+      </li>
+
+      <li class="sport-item" id="volleyball-section">
+        <div class="sport-text">
+          <strong>Volleyball</strong>
+          <ul>
+            <li>My family used to play every weekend with other family friends.</li>
+            <li>I love the feeling of being able to spike the ball on somebody or to block a spike. It's very rewarding.</li>
+            <li>My YSA would play volleyball every week together so I got a lot of playing time with my friends.</li>
+          </ul>
+        </div>
+        <div class="sport-image">
+          <img src="assets/img/volleyball.jpg" alt="Volleyball" />
+        </div>
+      </li>
+    </ol>
+  </div>
+
+  <!-- Embedded YouTube Video -->
+  <div class="media-div" id="video-section">
+    <h2>Watch These Crazy Spikeball Players!</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/watch?v=wpF7cKuZJfA" 
+      title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+  </div>
+  
+  <!-- Embedded Tableau Graph -->
+  <div class="tableau-div">
+    <h2>Look at Pickleball Courts by Each State</h2>
+    <div class='tableauPlaceholder' id='viz1750377259620' style='position: relative'>
+      <noscript>
+        <a href='#'><img alt='Courts by State' src='https://public.tableau.com/static/images/X3/X3ZY8K645/1_rss.png' style='border: none' /></a>
+      </noscript>
+      <object class='tableauViz'>
+        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+        <param name='embed_code_version' value='3' />
+        <param name='path' value='shared&#47;X3ZY8K645' />
+        <param name='toolbar' value='yes' />
+      </object>
+    </div>
+    <script type='text/javascript'>
+      var divElement = document.getElementById('viz1750377259620');
+      var vizElement = divElement.getElementsByTagName('object')[0];
+      vizElement.style.width = '100%';
+      vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+      var scriptElement = document.createElement('script');
+      scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+      vizElement.parentNode.insertBefore(scriptElement, vizElement);
+    </script>
+    <a href="lifter-estimator.html" target="_blank" class="lift-app-link">💪 Try the Gym Lift Estimator</a>
+  </div>
+
+</body>
+</html>
